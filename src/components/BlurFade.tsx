@@ -1,13 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import {
-  AnimatePresence,
-  motion,
-  useInView,
-  UseInViewOptions,
-  Variants,
-} from "framer-motion";
+import { AnimatePresence, motion, useInView, Variants, UseInViewOptions } from "framer-motion";
 
 type MarginType = UseInViewOptions["margin"];
 
@@ -23,7 +17,7 @@ interface BlurFadeProps {
   blur?: string;
 }
 
-export default function BlurFade({
+const BlurFade = ({
   children,
   className,
   variant,
@@ -33,16 +27,14 @@ export default function BlurFade({
   inView = false,
   inViewMargin = "-50px",
   blur = "6px",
-}: BlurFadeProps) {
-  const ref = useRef<HTMLDivElement | null>(null);
+}: BlurFadeProps) => {
+  const ref = useRef(null);
   const inViewResult = useInView(ref, { once: true, margin: inViewMargin });
   const isInView = !inView || inViewResult;
-
   const defaultVariants: Variants = {
     hidden: { y: yOffset, opacity: 0, filter: `blur(${blur})` },
-    visible: { y: -yOffset, opacity: 1, filter: "blur(0px)" },
+    visible: { y: -yOffset, opacity: 1, filter: `blur(0px)` },
   };
-
   const combinedVariants = variant || defaultVariants;
 
   return (
@@ -64,4 +56,6 @@ export default function BlurFade({
       </motion.div>
     </AnimatePresence>
   );
-}
+};
+
+export default BlurFade;
