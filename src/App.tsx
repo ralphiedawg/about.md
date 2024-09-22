@@ -4,7 +4,7 @@ import WordPullUp from './components/WordPullUp';
 import Projects from './pages/Projects'; // Make sure this import is correct
 
 const Home = () => (
-  <div className="relative z-10 flex flex-col items-center">
+  <div className="relative z-10 flex flex-col items-center justify-center min-h-screen w-full bg-[#FFFCF2]">
     <h1 className="text-6xl font-bold text-customDark">Russell Page</h1>
     <div className="mt-4 text-4xl text-customDark">
       <WordPullUp words="High School Student, Tech Enthusiast" />
