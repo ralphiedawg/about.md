@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import WordPullUp from './components/WordPullUp';
+import About from './pages/About';  // Make sure this is correctly imported
 import Projects from './pages/Projects'; // Make sure this import is correct
 
 const Home = () => (
@@ -12,16 +13,21 @@ const Home = () => (
     <Link to="/projects" className="text-customDark mt-4">
       Projects
     </Link>
-  </div>
+     <Link to="/about" className="text-customDark mt-4">
+      About Me
+    </Link>
+ </div>
 );
 
 function App() {
-  return (
-    <Router>
-      <div className="relative flex flex-col items-center justify-center min-h-screen w-full">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/projects" element={<Projects />} />
+    return (
+        <Router>
+            <div className="relative flex flex-col items-center justify-center min-h-screen w-full">
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/projects" element={<Projects />} />
+                    <Route path="/about" element={<About />} /> 
+
         </Routes>
       </div>
     </Router>

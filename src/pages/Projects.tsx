@@ -14,7 +14,7 @@ const Projects = () => {
             <BlurFade className="text-white">
               <h2 className="text-2xl font-semibold">ScheduleSPX</h2>
               <p className="mt-2 text-gray-200">The better scheduling app, by students for students.</p>
-              <a href="schedulespx.com/about" className="mt-4 inline-block text-blue-300 hover:underline">
+              <a href="https://schedulespx.com/about" className="mt-4 inline-block text-blue-300 hover:underline">
                 View Project
               </a>
             </BlurFade>
