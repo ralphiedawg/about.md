@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, } from 'react-router-dom';
 import WordPullUp from './components/WordPullUp';
 import About from './pages/About';  // Ensure this is correctly imported
 import Projects from './pages/Projects'; // Ensure this import is correct

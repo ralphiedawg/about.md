@@ -1,4 +1,3 @@
-import React from 'react';
 import BlurFade from '../components/BlurFade'; 
 import { Helmet } from 'react-helmet-async';
 const Projects = () => {
