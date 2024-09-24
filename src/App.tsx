@@ -1,8 +1,10 @@
 import { BrowserRouter as Router, Routes, Route, } from 'react-router-dom';
 import WordPullUp from './components/WordPullUp';
-import About from './pages/About';  // Ensure this is correctly imported
-import Projects from './pages/Projects'; // Ensure this import is correct
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Projects from './pages/Projects';
 import NavBar from './components/NavBar'; // Import NavBar component
+import Footer  from './components/Footer';
 import { HelmetProvider } from 'react-helmet-async';
 
 const Home = () => (
@@ -11,9 +13,10 @@ const Home = () => (
             <title>Home - Russell Page</title>
         </HelmetProvider>
         <h1 className="text-6xl font-bold text-customDark">Russell Page</h1>
-        <div className="mt-4 text-4xl text-customDark">
-            <WordPullUp words="High School Student, Tech Enthusiast" />
+        <div className="mt-4 font-semibold text-4xl text-customDark">
+            <WordPullUp words="Tech Enthusiast, Budding Developer" />
         </div>
+        <Footer />
     </div>
 );
 
@@ -27,6 +30,8 @@ function App() {
                         <Route path="/" element={<Home />} />
                         <Route path="/projects" element={<Projects />} />
                         <Route path="/about" element={<About />} /> 
+                        <Route path="/contact" element={<Contact />} /> 
+
                     </Routes>
                 </div>
             </Router>
