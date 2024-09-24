@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import WordPullUp from './components/WordPullUp';
 import Projects from './pages/Projects'; // Make sure this import is correct

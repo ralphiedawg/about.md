@@ -1,4 +1,3 @@
-import React from 'react';
 import BlurFade from '../components/BlurFade'; 
 const Projects = () => {
   return (
