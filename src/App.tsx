@@ -1,9 +1,9 @@
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import WordPullUp from './components/WordPullUp';
-import About from './pages/About';  // Make sure this is correctly imported
+import About from './pages/About';  // Ensure this is correctly imported
+import Projects from './pages/Projects'; // Ensure this import is correct
+import NavBar from './components/NavBar'; // Import NavBar component
 import { HelmetProvider } from 'react-helmet-async';
-import Projects from './pages/Projects'; // Make sure this import is correct
 
 const Home = () => (
     <div className="relative z-10 flex flex-col items-center justify-center min-h-screen w-full bg-[#FFFCF2]">
@@ -14,31 +14,24 @@ const Home = () => (
         <div className="mt-4 text-4xl text-customDark">
             <WordPullUp words="High School Student, Tech Enthusiast" />
         </div>
-        <Link to="/projects" className="text-customDark mt-4">
-            Projects
-        </Link>
-        <Link to="/about" className="text-customDark mt-4">
-            About Me
-        </Link>
     </div>
 );
 
 function App() {
     return (
-            <HelmetProvider>
-        <Router>
-            <div className="relative flex flex-col items-center justify-center min-h-screen w-full">
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/projects" element={<Projects />} />
-                    <Route path="/about" element={<About />} /> 
-
+        <HelmetProvider>
+            <Router>
+                <NavBar />
+                <div className="relative flex flex-col items-center justify-center min-h-screen w-full">
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/projects" element={<Projects />} />
+                        <Route path="/about" element={<About />} /> 
                     </Routes>
                 </div>
             </Router>
         </HelmetProvider>
-
-  );
+    );
 }
 
 export default App;
