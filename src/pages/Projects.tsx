@@ -5,7 +5,7 @@ const Projects = () => {
     return (
         <div className="flex flex-col items-start justify-start min-h-screen w-full bg-[#FFFCF2] p-8">
             <Helmet>
-                <title>Projects - Russell Page</title>
+                <title>Me - My Portfolio</title>
             </Helmet>
             <h1 className="text-6xl font-bold text-customDark">My Projects</h1>
             <p className="mt-4 text-4xl text-customDark">Here are some of the projects I've worked on:</p>
