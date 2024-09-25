@@ -1,30 +1,41 @@
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Removed Link import
 import WordPullUp from './components/WordPullUp';
-import Projects from './pages/Projects'; // Make sure this import is correct
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Projects from './pages/Projects';
+import NavBar from './components/NavBar'; // Import NavBar component
+import Footer from './components/Footer';
+import { HelmetProvider } from 'react-helmet-async';
 
 const Home = () => (
-  <div className="relative z-10 flex flex-col items-center justify-center min-h-screen w-full bg-[#FFFCF2]">
-    <h1 className="text-6xl font-bold text-customDark">Russell Page</h1>
-    <div className="mt-4 text-4xl text-customDark">
-      <WordPullUp words="High School Student, Tech Enthusiast" />
+    <div className="relative z-10 flex flex-col items-center justify-center min-h-screen w-full bg-[#FFFCF2]">
+        <HelmetProvider>
+            <title>Home - Russell Page</title>
+        </HelmetProvider>
+        <h1 className="text-6xl font-bold text-customDark">Russell Page</h1>
+        <div className="mt-4 font-semibold text-4xl text-customDark">
+            <WordPullUp words="Tech Enthusiast, Budding Developer" />
+        </div>
+        <Footer />
     </div>
-    <Link to="/projects" className="text-customDark mt-4">
-      Projects
-    </Link>
-  </div>
 );
 
 function App() {
-  return (
-    <Router>
-      <div className="relative flex flex-col items-center justify-center min-h-screen w-full">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/projects" element={<Projects />} />
-        </Routes>
-      </div>
-    </Router>
-  );
+    return (
+        <HelmetProvider>
+            <Router>
+                <NavBar />
+                <div className="relative flex flex-col items-center justify-center min-h-screen w-full">
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/projects" element={<Projects />} />
+                        <Route path="/about" element={<About />} />
+                        <Route path="/contact" element={<Contact />} />
+                    </Routes>
+                </div>
+            </Router>
+        </HelmetProvider>
+    );
 }
 
 export default App;
