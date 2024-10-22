@@ -1,6 +1,6 @@
 import BlurFade from '../components/BlurFade'; 
 import { Helmet } from 'react-helmet-async';
-import schedulespx from '../assets/schedulespx.png'
+import schedulespx from '../schedulespx.png'
 const Projects = () => {
     return (
         <div className="flex flex-col items-start justify-start min-h-screen w-full bg-[#FFFCF2] p-8">
@@ -15,10 +15,8 @@ const Projects = () => {
                     <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center p-4">
                         <BlurFade className="text-white">
                             <h2 className="text-2xl font-semibold">ScheduleSPX</h2>
-                            <p className="mt-2 text-gray-200">The better scheduling app, by students for students.</p>
-                            <a href="https://schedulespx.com/about" className="mt-4 inline-block text-blue-300 hover:underline">
-                                View Project
-                            </a>
+                            <p className="mt-2 text-gray-200">The All-in-One Student Dashboard</p>
+                            <a href="https://schedulespx.com/about" className="mt-4 inline-block text-blue-300 hover:underline"> View Project </a>
                         </BlurFade>
                     </div>
                 </div>
