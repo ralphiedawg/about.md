@@ -1,9 +1,9 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Removed Link import
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; 
 import WordPullUp from './components/WordPullUp';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Projects from './pages/Projects';
-import NavBar from './components/NavBar'; // Import NavBar component
+import NavBar from './components/NavBar'; 
 import Footer from './components/Footer';
 import { HelmetProvider } from 'react-helmet-async';
 
